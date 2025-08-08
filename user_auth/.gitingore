@@ -1,0 +1,27 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Django-specific
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# App-specific cache/migrations
+user_auth/__pycache__/
+user_auth/users/__pycache__/
+user_auth/users/migrations/
+
+# VS Code / IDE settings
+.vscode/
+.idea/
+
+# Mac / OS generated files
+.DS_Store
