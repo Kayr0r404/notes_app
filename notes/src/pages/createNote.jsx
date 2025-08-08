@@ -36,7 +36,7 @@ const NoteForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:8000/api/register-note', {
+      const response = await fetch('api/register-note', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },

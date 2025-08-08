@@ -15,7 +15,7 @@ export default function AuthProvider({ children }) {
         setError(null);
 
         try {
-            const response = await fetch('http://localhost:8000/api/token/', {
+            const response = await fetch('api/token/', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
