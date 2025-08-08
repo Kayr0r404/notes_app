@@ -15,7 +15,7 @@ export default function AuthProvider({ children }) {
         setError(null);
 
         try {
-            const response = await fetch('api/token/', {
+            const response = await fetch('https://notes-app-6hhk.onrender.com/api/token/', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -49,7 +49,7 @@ export default function AuthProvider({ children }) {
     const logout = async () => {
         setLoading(true);
         try {
-            const response = await fetch('/api/logout', {
+            const response = await fetch('https://notes-app-6hhk.onrender.com/api/logout', {
                 method: 'POST',
                 credentials: 'include',
             });
