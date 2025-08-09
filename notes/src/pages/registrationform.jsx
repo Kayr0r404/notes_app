@@ -60,7 +60,7 @@ const RegistrationForm = () => {
   setIsSubmitting(true);
 
   try {
-    const response = await fetch('api/register', {
+    const response = await fetch('https://notes-app-6hhk.onrender.com/api/register', {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
