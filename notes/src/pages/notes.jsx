@@ -26,7 +26,7 @@ export default function Notes() {
 
           if (!refreshResponse.ok) {
             logout();
-            navigate('https://notes-0o79.onrender.com/login');
+            navigate('/login');
             return;
           }
 

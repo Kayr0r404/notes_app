@@ -82,7 +82,7 @@ const RegistrationForm = () => {
     }
 
     console.log('Registration successful:', data);
-    navigate('https://notes-0o79.onrender.com/login');
+    navigate('/login');
 
   } catch (error) {
     console.error('Registration error:', error);

@@ -56,7 +56,7 @@ const NoteForm = () => {
       }
 
       console.log('Note created successfully:', data);
-      navigate('https://notes-0o79.onrender.com/notes')
+      navigate('/notes')
       setNoteData({ description: '', content: '' });
 
     } catch (error) {
