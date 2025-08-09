@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const NoteForm = () => {
   const [noteData, setNoteData] = useState({
@@ -7,6 +8,7 @@ const NoteForm = () => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +38,7 @@ const NoteForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('api/register-note', {
+      const response = await fetch('https://notes-app-6hhk.onrender.com/api/register-note', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
@@ -54,7 +56,8 @@ const NoteForm = () => {
       }
 
       console.log('Note created successfully:', data);
-      setNoteData({ description: '', content: '' }); // reset form
+      navigate('https://notes-0o79.onrender.com/notes')
+      setNoteData({ description: '', content: '' });
 
     } catch (error) {
       console.error('Error creating note:', error);

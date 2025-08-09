@@ -61,7 +61,7 @@ export default function AuthProvider({ children }) {
             setIsAuthenticated(false);
             setAuthUser(null);
             setError(null);
-            navigate("/")
+            navigate("https://notes-0o79.onrender.com/notes")
         } catch (err) {
             setError(err.message || "An error occurred during logout");
         } finally {

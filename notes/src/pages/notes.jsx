@@ -13,25 +13,25 @@ export default function Notes() {
   useEffect(() => {
     const getNotes = async () => {
       try {
-        let response = await fetch("/api/notes", {
+        let response = await fetch("https://notes-app-6hhk.onrender.com/api/notes", {
           method: 'GET',
           credentials: 'include',
         });
 
         if (response.status === 401) {
-          const refreshResponse = await fetch('/api/token/refresh/', {
+          const refreshResponse = await fetch('https://notes-app-6hhk.onrender.com/api/token/refresh/', {
             method: 'POST',
             credentials: 'include'
           });
 
           if (!refreshResponse.ok) {
             logout();
-            navigate('/login');
+            navigate('https://notes-0o79.onrender.com/login');
             return;
           }
 
           setAuthUser(await refreshResponse.json());
-          response = await fetch("/api/notes", {
+          response = await fetch("https://notes-app-6hhk.onrender.com/api/notes", {
             method: 'GET',
             credentials: 'include',
           });
