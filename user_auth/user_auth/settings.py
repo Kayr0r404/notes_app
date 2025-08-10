@@ -31,7 +31,7 @@ SECRET_KEY = environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "notes-app-6hhk.onrender.com",
+    "notes-server-twpg.onrender.com",
     "http://localhost:8000",
     "localhost",
 ]
