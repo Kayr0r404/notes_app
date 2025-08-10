@@ -44,7 +44,7 @@ const NoteForm = () => {
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          title: noteData.title,
+          description: noteData.title,
           content: noteData.content
         })
       });
