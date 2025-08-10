@@ -1,0 +1,55 @@
+# Python cache and compiled files
+*/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+user_auth/user_auth/.env
+
+# Django-specific
+*.log
+db.sqlite3
+media/
+staticfiles/
+wget-log
+
+# App-specific cache/migrations
+user_auth/__pycache__/
+user_auth/users/__pycache__/
+user_auth/users/migrations/
+
+# VS Code / IDE settings
+.vscode/
+.idea/
+
+# Mac / OS generated files
+.DS_Store
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+notes/node_modules
+notes/.pnp
+notes/.pnp.js
+notes/package-lock.json
+
+# testing
+notes/coverage
+
+# production
+notes//build
+
+# misc
+notes/.DS_Store
+notes/.env.local
+notes/.env.development.local
+notes/.env.test.local
+notes/.env.production.local
+
+notes/npm-debug.log*
+notes/yarn-debug.log*
+notes/yarn-error.log*
+
+notes/.env
