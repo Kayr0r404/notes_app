@@ -123,6 +123,7 @@ def logout(request):
 @api_view(["GET"])
 @permission_classes([AllowAny])
 def get_all_notes(request):
+    """"""
 
     notes = Note.objects.all()
     serializer = NoteSerializer(notes, many=True)
