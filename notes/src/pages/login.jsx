@@ -22,9 +22,6 @@ export default function Login() {
 
     try {
       await login(inputData);
-      if (isAuthenticated) {
-          navigate("/notes");
-      }
     } catch (err) {
       setError(err.message || "Invalid email or password");
     }

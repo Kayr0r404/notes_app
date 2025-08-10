@@ -33,7 +33,7 @@ export default function AuthProvider({ children }) {
             }
 
             const userData = await response.json();
-            console.log('here',userData)
+            navigate('/notes');
             setAuthUser(userData);
             setIsAuthenticated(true);
             setError(null);
