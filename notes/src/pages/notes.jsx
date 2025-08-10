@@ -182,20 +182,6 @@ export default function Notes() {
       ) : (
         <div style={{ textAlign: 'center', padding: '40px 0', color: '#7f8c8d' }}>
           <p>No notes found</p>
-          <Link 
-            to='/create-note'
-            style={{
-              display: 'inline-block',
-              marginTop: '10px',
-              padding: '8px 16px',
-              background: '#3498db',
-              color: 'white',
-              textDecoration: 'none',
-              borderRadius: '4px'
-            }}
-          >
-            Create your first note
-          </Link>
         </div>
       )}
 
