@@ -21,8 +21,8 @@ const NoteForm = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!noteData.description.trim()) {
-      newErrors.description = 'Description is required';
+    if (!noteData.title.trim()) {
+      newErrors.title = 'title is required';
     }
     if (!noteData.content.trim()) {
       newErrors.content = 'Content is required';
@@ -44,7 +44,7 @@ const NoteForm = () => {
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          description: noteData.title,
+          title: noteData.title,
           content: noteData.content
         })
       });
@@ -58,7 +58,7 @@ const NoteForm = () => {
 
       console.log('Note created successfully:', data);
       navigate('/notes')
-      setNoteData({ description: '', content: '' });
+      setNoteData({ title: '', content: '' });
 
     } catch (error) {
       console.error('Error creating note:', error);
@@ -84,9 +84,9 @@ const NoteForm = () => {
       }}>Create Note</h2>
       
       <form onSubmit={handleSubmit}>
-        {/* Description Field */}
+        {/* title Field */}
         <div style={{ marginBottom: '1rem' }}>
-          <label htmlFor="description" style={{
+          <label htmlFor="title" style={{
             display: 'block',
             fontSize: '0.875rem',
             fontWeight: '500',
@@ -96,27 +96,27 @@ const NoteForm = () => {
           </label>
           <input
             type="text"
-            id="description"
-            name="description"
-            value={noteData.description}
+            id="title"
+            name="title"
+            value={noteData.title}
             onChange={handleChange}
             style={{
               marginTop: '0.25rem',
               display: 'block',
               width: '100%',
               padding: '0.5rem 0.75rem',
-              border: `1px solid ${errors.description ? '#ef4444' : '#d1d5db'}`,
+              border: `1px solid ${errors.title ? '#ef4444' : '#d1d5db'}`,
               borderRadius: '0.375rem',
               boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)'
             }}
           />
-          {errors.description && (
+          {errors.title && (
             <p style={{
               marginTop: '0.25rem',
               fontSize: '0.875rem',
               color: '#dc2626'
             }}>
-              {errors.description}
+              {errors.title}
             </p>
           )}
         </div>
