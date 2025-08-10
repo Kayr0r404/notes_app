@@ -4,7 +4,7 @@ import RegistrationForm from './pages/registrationform';
 import NoteForm from './pages/createNote';
 import  AuthProvider from './context/authContext';
 import Home from './pages/home';
-import NavBar from './pages/navigationBar';
+import NavBar from './pages/navigationBar'; 
 import {Routes, Route} from 'react-router-dom';
 
 function App() {
